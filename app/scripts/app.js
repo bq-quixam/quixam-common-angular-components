@@ -15,21 +15,32 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'quixam-common-components'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'vm'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/quixamInputs', {
+        templateUrl: 'views/quixamInputs.html',
+        controller: 'quixamInputs',
+        controllerAs: 'vm'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+    .when('/questionAnswers', {
+      templateUrl: 'views/questionAnswers.html',
+      controller: 'questionAnswers',
+      controllerAs: 'vm'
+    })
+    .when('/quixamVisualization', {
+      templateUrl: 'views/quixamVisualization.html',
+      controller: 'quixamVisualization',
+      controllerAs: 'vm'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
   });

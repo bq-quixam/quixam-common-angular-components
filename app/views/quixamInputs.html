@@ -1,0 +1,41 @@
+<quixam-text-field
+  data-name="'input'"
+  data-message="'please enter valid input'"
+  data-on-change="vm.onInputChange(ctrl)"
+  data-caption="'your name here'"
+  regex-type="phone">
+</quixam-text-field>
+
+<quixam-select-field
+  data-name="'select'"
+  data-model="vm.selectOptions[0]"
+  data-caption="'select one option'"
+  data-options="vm.selectOptions"
+  data-on-change="vm.onSelectChange(ctrl)">
+</quixam-select-field>
+
+<form name="formExample">
+  <div ng-repeat="answer in vm.answers">
+    <quixam-radio-button
+      data-name="'inputvalue'"
+      data-text-value="'select me'"
+      data-model="vm.isSelected"
+      data-on-change="vm.onSelectOption(ctrl)"
+      data-is-disabled="vm.isDisabled"
+      data-value="answer.value">
+    </quixam-radio-button>
+  </div>
+
+  <div ng-repeat="answer in vm.checkboxAnswers">
+    <quixam-check-box
+      data-model="vm.isCheckboxSelected[answer.id]"
+      data-name="answer.id"
+      data-on-change="vm.onSelectCheckBox(ctrl)"
+      data-is-disabled="vm.isDisabled"
+      data-value="answer.value"
+      data-text-value="'checkbox value'">
+
+    </quixam-check-box>
+
+  </div>
+</form>

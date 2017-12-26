@@ -1,0 +1,15 @@
+<div>
+  <quixam-question-text
+      question-text="$ctrl.questionData.questionText">
+  </quixam-question-text>
+  <div class="q-u__display--flex" ng-repeat="answerChoice in $ctrl.questionData.displayAnswers">
+    <quixam-answer-icon class="q-u__margin" data-is-correct-icon="true"></quixam-answer-icon>
+    <quixam-radio-button
+        data-text-value="answerChoice"
+        data-is-disabled="false"
+        data-name="'multipleChoice'"
+        data-model="vm.isSelected"
+        data-value="answerChoice">
+    </quixam-radio-button>
+  </div>
+</div>

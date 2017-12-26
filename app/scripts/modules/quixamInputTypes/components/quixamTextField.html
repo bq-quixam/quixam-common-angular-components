@@ -1,0 +1,14 @@
+<div>
+  <span class="q-text-field__caption">{{$ctrl.caption}}</span>
+
+  <input
+      class="q-text-field"
+      type="{{$ctrl.inputType}}"
+      name="$ctrl.name"
+      ng-model="$ctrl.model"
+      ng-change="$ctrl.onInputChange()"
+      ng-pattern="$ctrl.regexPattern"
+      ng-disabled="$ctrl.isDisabled">
+
+  <span ng-if="$ctrl.isErrorDisplay" class="q-text-field__error-message">{{$ctrl.message}}</span>
+</div>

@@ -9,7 +9,10 @@
     "angular-resource": "^1.4.0",
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
-    "angular-touch": "^1.4.0"
+    "angular-touch": "^1.4.0",
+    "angular-svg-round-progressbar": "0.4.8",
+    "angular-page-loader": "*",
+    "angular-material": "^1.1.5"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

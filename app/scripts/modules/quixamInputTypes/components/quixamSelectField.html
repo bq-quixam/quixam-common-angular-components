@@ -1,0 +1,11 @@
+<div>
+  <span class="q-text-field__caption">{{$ctrl.caption}}</span>
+  <label class="q-select-dropdown">
+    <select class="q-text-field"
+            ng-model="$ctrl.model"
+            ng-options="value.model for (index, value) in $ctrl.options"
+            ng-change="$ctrl.onSelectChange()"
+            ng-disabled="$ctrl.isDisabled">
+    </select>
+  </label>
+</div>

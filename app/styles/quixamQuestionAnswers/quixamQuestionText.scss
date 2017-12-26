@@ -1,0 +1,6 @@
+@import "../common/quixamAllVariables";
+.q-question{
+    &-text{
+      color: $q-color-text;
+    }
+}

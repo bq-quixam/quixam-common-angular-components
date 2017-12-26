@@ -1,0 +1,26 @@
+@import "quixamAllVariables";
+
+.q-u__display{
+    &--flex{
+      display: flex;
+    }
+    &--inline{
+      display: inline;
+      &-flex{
+        display: inline-flex;
+      }
+      &-block{
+        display: inline-block;
+      }
+    }
+    &--block{
+      display: block;
+    }
+    &--none{
+      display: none;
+    }
+}
+
+.q-u__margin{
+  margin: $q-space;
+}

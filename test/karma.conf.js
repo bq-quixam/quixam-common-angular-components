@@ -29,12 +29,28 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-svg-round-progressbar/build/roundProgress.js',
+      'bower_components/angular-page-loader/dist/angular-page-loader.js',
+      'bower_components/angular-aria/angular-aria.js',
+      'bower_components/angular-messages/angular-messages.js',
+      'bower_components/angular-material/angular-material.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+      'app/scripts/modules/quixamQuestionAnswers/*.js',
+      'app/scripts/modules/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
+
+    preprocessors: {
+      'app/scripts/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app/',
+      moduleName: 'ngTemplates' //you can name this whatever you want
+    },
 
     // list of files / patterns to exclude
     exclude: [
@@ -58,7 +74,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor'
     ],
 
     // Continuous Integration mode
@@ -69,7 +86,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {

@@ -1,0 +1,12 @@
+<p class="quixam-radio">
+  <input
+    type="radio"
+    id="{{$ctrl.value}}"
+    name="{{$ctrl.name}}"
+    ng-model="$ctrl.model"
+    value="{{$ctrl.value}}"
+    ng-change="$ctrl.onSelectOption()"
+    tabindex="0">
+
+  <label class="quixam-radio__text" for="{{$ctrl.value}}">{{$ctrl.textValue}}</label>
+</p>

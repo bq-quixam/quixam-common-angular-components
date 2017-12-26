@@ -1,0 +1,18 @@
+{
+  "questionData": {
+    "displayAnswers": {
+      "choice_1": "hello this is first choice",
+      "choice_2": "hello this is second choice",
+      "choice_3": "hello this is third choice",
+      "choice_4": "hello this is fourth choice"
+    },
+    "questionText": "select any number of choices that seems correct from the example choices to answer this question?",
+    "correctAnswer": ["choice_2", "choice_4"],
+    "questionType": "QMS",
+    "questionNumber": 2,
+    "totalQuestions": 25
+  },
+  "examId": "123QWRHHY",
+  "examTitle": "example test exam",
+  "userId": "234553"
+}

@@ -9,9 +9,13 @@
  */
 angular.module('quixamCommonAngularComponentsApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
+    var ctrl = this;
+    ctrl.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
+
   });
