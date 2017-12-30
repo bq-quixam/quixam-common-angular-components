@@ -1,9 +1,11 @@
-<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}"
+         md-theme-watch
+         ng-style="{'border-top': '5px solid '+vm.assignmentData.statusColor,'background-color': '#34495e','color': 'white'}">
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">Assignment Title
-        <md-button class="md-fab md-mini md-primary">
-          <md-icon ng-style="{color: blue}"
+      <span class="md-headline">{{vm.assignmentData.examTitle}}
+        <md-button class="md-fab md-mini md-primary" ng-style="{'background-color': vm.assignmentData.statusColor}">
+          <md-icon ng-style="{'color': white}"
                    aria-label="'launch'"
                    class="material-icons step"
                    ng-class="'md-24'"
@@ -12,11 +14,11 @@
         </md-button>
 
       </span>
-      <span class="md-subhead">Lesson Title</span>
-      <span class="md-subheader-content"> Assignment Id : 10976543</span>
-      <span class="md-subheader-content">Status : Not Started</span>
-      <span class="md-subheader-content">Start Date: 11/12/2017 9:00 pm</span>
-      <span class="md-subheader-content">Due Date: 13/12/2017 9:00 pm</span>
+      <span class="md-subhead">{{vm.assignmentData.lessonTitle}}</span>
+      <span class="md-subheader-content"> Assignment Id : {{vm.assignmentData.examId}}</span>
+      <span class="md-subheader-content">Status : <span ng-style="{'color': vm.assignmentData.statusColor}">{{vm.assignmentData.status}}</span></span>
+      <span class="md-subheader-content">Start Date: {{vm.assignmentData.startDate}}</span>
+      <span class="md-subheader-content">Due Date: {{vm.assignmentData.dueDate}}</span>
     </md-card-title-text>
 
   </md-card-title>

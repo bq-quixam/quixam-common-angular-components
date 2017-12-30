@@ -1,0 +1,117 @@
+@import "../quixamAllVariables";
+
+.q-nav{
+
+  &__header{
+    width: 100%;
+    background-color: $q-color-nav;
+    height: 50px;
+    display: inline-flex;
+    border: 1px solid #e7e7e7;
+  }
+
+  &__icon{
+    color: #fff;
+    padding: $q-space/2;
+    font-size: 25px;
+    background-color: $q-color-background;
+    outline: none;
+    border: none;
+  }
+
+  &__logo{
+    width: 150px;
+    background-color: $q-color-background;
+    color: white;
+    font-size: 16px;
+    padding: 14px 16px;
+    border-left: 2px solid;
+    a{
+      text-decoration: none;
+      outline: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.dropbtn {
+  background-color: $q-color-background;
+  color: white;
+  padding: 13px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-left: 2px solid;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: $q-color-background;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

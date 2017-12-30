@@ -1,0 +1,56 @@
+@import "../quixamAllVariables";
+
+.md-tab{
+  text-transform: none !important;
+  font-size: $q-font-size-base !important;
+
+}
+
+.md-active{
+  color: $q-color-info !important;
+}
+
+md-ink-bar{
+  background: $q-color-background !important;
+}
+
+.dtp table.dtp-picker-days tr > td > a.selected,
+.dtp table.dtp-picker-days tr > td > a.selected.hilite,
+.dtp div.dtp-date, .dtp div.dtp-time, .dtp .dtp-hand.on,
+.dtp .dtp-actual-meridien a.selected,
+.dtp .dtp-picker-time > a.dtp-select-hour.selected {
+  background: $q-color-background;
+}
+
+.dtp table.dtp-picker-days tr > td > a.hilite:not(.selected),
+.dtp div.dtp-actual-time.p60 span.selected {
+  color: $q-color-background;
+}
+
+.dtp div.dtp-year-btn, .dtp div.dtp-actual-year, .dtp div.dtp-actual-maxtime {
+  color: #d0f0f0;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+  background: $q-color-background;
+}
+
+.form-icon{
+  color: $q-color-background;
+}
+
+.q-exam__settings{
+  .md-button{
+    text-transform: none !important;
+    background-color: $q-color-background;
+    color: #fff;
+    font-size: $q-font-size-base;
+    padding: 0px $q-space;
+  }
+
+  .md-button:not([disabled]):hover {
+    background-color: rgba(158, 158, 158, 0.2);
+    color: $q-color-background;
+  }
+}
+

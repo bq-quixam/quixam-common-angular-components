@@ -1,0 +1,54 @@
+
+<div class="q-exam__settings">
+  <div style="margin: 16px;" flex>
+    <h4 style="padding-top: 18px">Start Date:</h4>
+    <md-input-container flex-gt-md="40" >
+      <md-icon class="form-icon">date_range</md-icon>
+      <input mdc-datetime-picker date="true" time="false" type="text" id="time" short-time="true"
+             show-todays-date click-outside-to-close="true"
+             placeholder="Enter Start Date" auto-ok="true"
+             min-date="minDate"
+             ng-change="vm.saveChange()"
+             ng-model="vm.startDate">
+    </md-input-container>
+    <md-input-container flex-gt-md="40" >
+      <md-icon class="form-icon">access_time</md-icon>
+      <input mdc-datetime-picker date="false" time="true" type="text" id="time" short-time="true"
+             show-todays-date click-outside-to-close="true"
+             placeholder="Enter  Time" auto-ok="true"
+             min-date="minDate" minute-steps="1"
+             format="hh:mm a"
+             ng-change="vm.saveChange()"
+             ng-model="vm.startTime">
+    </md-input-container>
+  </div>
+
+  <div style="margin: 16px;" flex>
+    <h4 style="padding-top: 18px">Due Date:</h4>
+    <md-input-container flex-gt-md="40">
+      <md-icon class="form-icon">date_range</md-icon>
+      <input mdc-datetime-picker date="true" time="false" type="text" id="time" short-time="true"
+             show-todays-date click-outside-to-close="true"
+             placeholder="Enter Due Date" auto-ok="true"
+             min-date="minDate"
+             ng-change="vm.saveChange()"
+             ng-model="vm.dueDate">
+    </md-input-container>
+    <md-input-container flex-gt-md="40">
+      <md-icon class="form-icon">access_time</md-icon>
+      <input mdc-datetime-picker date="false" time="true" type="text" id="time" short-time="true"
+             show-todays-date click-outside-to-close="true"
+             placeholder="Enter Time" auto-ok="true"
+             min-date="minDate" minute-steps="1"
+             format="hh:mm a"
+             ng-change="vm.saveChange()"
+             ng-model="vm.dueTime">
+    </md-input-container>
+  </div>
+  <div style="margin: 16px">
+    <md-button class="md-button">Create Assignment</md-button>
+  </div>
+</div>
+
+
+

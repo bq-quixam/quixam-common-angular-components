@@ -1,16 +1,23 @@
-<h2> This module contains quixam's common angular components</h2>
+<quixam-navigation data-nav-data="vm.navData"></quixam-navigation>
 
+<div layout="row"  layout-xs="column" layout-wrap>
+  <div flex flex-sm="30" flex-gt-md="25" flex-md="30">
+    <md-list >
+      <md-subheader class="md-no-sticky">Filter options</md-subheader>
+      <md-list-item ng-repeat="option in vm.filterOptions">
+        <p> {{ option.name }} </p>
+        <md-checkbox class="md-secondary" ng-model="option.wanted"></md-checkbox>
+        <md-divider></md-divider>
+      </md-list-item>
+    </md-list>
+  </div>
+  <div flex flex-sm="70" flex-gt-md="75" flex-md="70">
+    <div layout="row"  layout-xs="column" layout-wrap>
+      <quixam-assignment-card flex flex-sm="50" flex-md="50" flex-gt-md="33" ng-repeat="assignment in vm.assignments"  assignment-data="assignment">
 
-<div layout="row" layout-xs="column">
-  <quixam-assignment-card flex>
-
-  </quixam-assignment-card>
-  <quixam-assignment-card flex>
-
-  </quixam-assignment-card>
-  <quixam-assignment-card flex>
-
-  </quixam-assignment-card>
-
+      </quixam-assignment-card>
+    </div>
+  </div>
 </div>
+
 

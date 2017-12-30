@@ -1,0 +1,20 @@
+<div flex-gt-md="50" style="margin: 16px">
+  <quixam-text-field
+    data-name="'input'"
+    data-message="'please enter valid input'"
+    data-on-change="vm.onInputChange(ctrl)"
+    data-caption="'exam title here'"
+    regex-type="text">
+  </quixam-text-field>
+</div>
+
+<div flex-gt-md="50" style="margin: 16px">
+  <quixam-select-field
+    data-name="'select'"
+    data-model="vm.selectOptions[0]"
+    data-caption="'select number of questions'"
+    data-options="vm.selectOptions"
+    data-on-change="vm.onSelectChange(ctrl)">
+  </quixam-select-field>
+</div>
+

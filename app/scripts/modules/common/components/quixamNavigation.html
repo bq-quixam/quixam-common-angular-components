@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="q-nav__header">
+  <button class="q-nav__icon" ng-click="vm.openSideNav($event)">&#9776;</button>
+  <div class="q-nav__logo">
+    <a ng-click="">Quixam Logo</a>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" ng-click="vm.openDropdown($event)">
+      <i class="fa fa-user"></i>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" ng-class="{'show': vm.isDropdownShown }">
+      <a ng-repeat="item in vm.navDropdownItems" href="{{item.path}}" >{{item.name}}</a>
+    </div>
+  </div>
+</div>
 
-</body>
-</html>
+<div class="sidenav" ng-style="{'width': vm.sideNavWidth}">
+  <a href="javascript:void(0)" class="closebtn" ng-click="vm.closeSideNav($event)">&times;</a>
+  <div ng-repeat="item in vm.sideNavItems">
+    <a href="{{item.path}}">
+      <span style="padding: 4px" ng-bind-html="item.icon"></span>
+      {{item.name}}
+    </a>
+    <hr>
+  </div>
+
+</div>

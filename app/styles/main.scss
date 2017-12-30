@@ -12,6 +12,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "quixamVisualizationComponents/quixamCircularProgress";
 @import "quixamLoaders/quixamCircleLoader";
 @import "quixamQuestionAnswers/quixamAnswerIcon";
+@import "common/project/quixamNavigation";
+@import "common/project/createAssignmentFlow";
+@import "common/project/profile";
+
+
 body{
   font-family: $q-font-family;
 }

@@ -16,6 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'angularMoment',
+    'ngMaterialDatePicker',
     'quixam-common-components'
   ])
   .config(function ($routeProvider) {
@@ -38,6 +40,16 @@ angular
     .when('/quixamVisualization', {
       templateUrl: 'views/quixamVisualization.html',
       controller: 'quixamVisualization',
+      controllerAs: 'vm'
+    })
+    .when('/createAssignment', {
+      templateUrl: 'views/createAssignment.html',
+      controller: 'createAssignment',
+      controllerAs: 'vm'
+    })
+    .when('/profile', {
+      templateUrl: 'views/profile.html',
+      controller: 'profileController',
       controllerAs: 'vm'
     })
     .otherwise({

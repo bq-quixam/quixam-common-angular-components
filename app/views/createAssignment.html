@@ -1,0 +1,16 @@
+<quixam-navigation data-nav-data="vm.navData"></quixam-navigation>
+<div ng-cloak style="margin-top: 16px">
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="vm.selectedTabIndex">
+      <md-tab  ng-repeat="tab in vm.tabs track by $index" md-on-select="vm.onTabSelected(tab, $index)" ng-disabled="tab.disabled">
+        <md-tab-label>
+          {{tab.title}}
+        </md-tab-label>
+        <md-tab-body>
+          <div ng-include="tab.templateUrl"></div>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+

@@ -1,0 +1,31 @@
+{
+  "sideNavItems": [
+    {
+      "name": "Assignments",
+      "icon": "<i class='fa fa-folder'></i>",
+      "path": ""
+    },{
+      "name": "Create Assignment",
+      "icon": "<i class='fa fa-plus'></i>",
+      "path": "#!/createAssignment"
+    },{
+      "name": "Students",
+      "icon": "<i class='fa fa-users'></i>",
+      "path": ""
+    }
+  ],
+  "navDropdownItems": [
+    {
+      "name": "Account",
+      "path": ""
+    },
+    {
+      "name": "Profile",
+      "path": "#!/profile"
+    },
+    {
+      "name": "Logout",
+      "path": ""
+    }
+  ]
+}
